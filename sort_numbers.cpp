@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -6,43 +7,17 @@ int main()
     int a, b, c;
     cin >> a >> b >> c;
 
-    if (a < b && a < c)
+    int arr[3] = {a, b, c};
+
+    sort(arr, arr + 3);
+
+    for (int i = 0; i < 3; i++)
     {
-        cout << a << endl;
-        if (b < c)
-        {
-            cout << b << endl;
-            cout << c << endl;
-        }
-        else if (c < b)
-        {
-            cout << c << endl;
-            cout << b << endl;
-        }
-    }
-    else if (b < a && b < c)
-    {
-        cout << b << endl;
-        if (a < c)
-        {
-            cout << a << endl;
-            cout << c << endl;
-        }
-        else if (c < a)
-        {
-            cout << c << endl;
-            cout << a << endl;
-        }
-    }
-    else
-    {
-        cout << c << endl;
-        cout << b << endl;
-        cout << a << endl;
+        cout << arr[i] << endl;
     }
     cout << endl;
     cout << a << endl
          << b << endl
-         << c << endl;
+         << c;
     return 0;
 }

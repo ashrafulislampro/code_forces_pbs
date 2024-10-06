@@ -3,28 +3,27 @@ using namespace std;
 
 int main()
 {
-    float x;
+    double x;
     cin >> x;
-
-    if (x >= 0 && x <= 25)
+    if (x < 0 || x > 100)
     {
-        cout << "Invertal [0, 25]" << endl;
+        cout << "Out of Intervals\n";
+    }
+    else if (x >= 0 && x <= 25)
+    {
+        cout << "Interval [0,25]\n";
     }
     else if (x > 25 && x <= 50)
     {
-        cout << "Invertal (25, 50]" << endl;
+        cout << "Interval (25,50]\n";
     }
     else if (x > 50 && x <= 75)
     {
-        cout << "Invertal (50, 75]" << endl;
+        cout << "Interval (50,75]\n";
     }
     else if (x > 75 && x <= 100)
     {
-        cout << "Invertal (75, 100]" << endl;
-    }
-    else
-    {
-        cout << "Out of Intervals" << endl;
+        cout << "Interval (75,100]\n";
     }
 
     return 0;

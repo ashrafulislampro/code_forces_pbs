@@ -1,13 +1,14 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    int a, b;
-    long long c, d;
+    long long c, d, a, b;
     cin >> a >> b >> c >> d;
-    bool isTrue = pow(a, b) > pow(c, d);
-    if (isTrue)
+    long long left = b * log(a);
+    long long right = d * log(c);
+    if (left > right)
     {
         cout << "YES" << endl;
     }

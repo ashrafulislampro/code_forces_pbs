@@ -5,9 +5,13 @@ int main()
 {
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-
-    long long result = (a % 100) * (b % 100) % 100 * (c % 100) % 100 * (d % 100) % 100;
-
-    cout << result % 100 << endl;
+    a %= 100;
+    b %= 100;
+    c %= 100;
+    d %= 100;
+    int t = a * b * c * d;
+    if (t % 100 <= 9)
+        cout << 0;
+    cout << t % 100;
     return 0;
 }

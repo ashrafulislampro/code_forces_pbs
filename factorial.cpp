@@ -1,17 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int isFact(int num)
-{
-    if (num <= 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return num * isFact(num - 1);
-    }
-}
+
 
 int main()
 {
@@ -21,7 +11,11 @@ int main()
     {
         int num;
         cin >> num;
-        cout << isFact(num) << endl;
+       long long fact = 1;
+       for(int i = 1; i <= num; i++){
+            fact*=i;
+       }
+       cout<<fact<<endl;
     }
     return 0;
 }

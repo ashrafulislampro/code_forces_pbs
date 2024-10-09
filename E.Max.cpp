@@ -5,7 +5,7 @@ int main()
 {
     int T, max_item = 0;
     cin >> T;
-    while (--T)
+    while (T--)
     {
         int item;
         cin >> item;
@@ -14,6 +14,6 @@ int main()
             max_item = item;
         }
     }
-    cout << max_item;
+    cout << max_item << endl;
     return 0;
 }

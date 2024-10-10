@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -7,7 +8,7 @@ int main()
 
     cin >> x >> p;
 
-    float bf_p = ((p * x * 1.0) / 100.00);
-    cout << bf_p;
+    float bf_p = (p * 100.00) / (100.00 - x);
+    cout << fixed << setprecision(2) << bf_p;
     return 0;
 }
